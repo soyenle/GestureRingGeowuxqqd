@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-         <title>2GestureRingGeo</title>
+         <title>4GestureRingGeo</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
@@ -253,6 +253,7 @@ AFRAME.registerComponent('gesture-detector', {
             embedded
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
+            gesture-detector
         >
             <a-assets>
                 <a-asset-item
@@ -267,7 +268,7 @@ AFRAME.registerComponent('gesture-detector', {
                     gltf-model="#animated-asset"
                     scale="0.9975820971489867 0.9975820971489867 0.9975820971489867"
                     gps-entity-place="latitude: 50.092258; longitude: 8.57765;"
-                       gesture-handler
+                    gesture-handler
                 ></a-entity>
 
             <a-camera gps-camera rotation-reader></a-camera>
