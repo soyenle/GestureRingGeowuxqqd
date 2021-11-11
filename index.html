@@ -1,12 +1,15 @@
 <!doctype html>
 <html>
     <head>
+         <title>GestureRingGeo</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+        
+         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -24,11 +27,12 @@
             </a-assets>
 
                 <a-entity
-                    look-at="[gps-camera]"
+           
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     scale="0.9975820971489867 0.9975820971489867 0.9975820971489867"
                     gps-entity-place="latitude: 50.092258; longitude: 8.57765;"
+                       gesture-handler
                 ></a-entity>
 
             <a-camera gps-camera rotation-reader></a-camera>
