@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-         <title>5GestureRingGeo</title>
+         <title>6GestureRingGeo</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
@@ -220,7 +220,12 @@ AFRAME.registerComponent('gesture-detector', {
             this.el.object3D.rotation.y +=
                 event.detail.positionChange.x * this.data.rotationFactor;
             this.el.object3D.rotation.x +=
+                
                 event.detail.positionChange.y * this.data.rotationFactor;
+            this.el.object3D.scale.x = 1 * this.initialScale.x;
+            this.el.object3D.scale.y = 1 * this.initialScale.y;
+            this.el.object3D.scale.z = 1 * this.initialScale.z;
+            
         }
     },
 
