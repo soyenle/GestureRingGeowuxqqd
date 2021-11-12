@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-         <title>3GestureRingGeo</title>
+         <title>4GestureRingGeo</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
@@ -272,10 +272,10 @@ AFRAME.registerComponent('gesture-detector', {
                 ></a-entity>
 
             
-           <a-camera gps-camera  >
+           <a-camera gps-camera="maxDistance: 20;" rotation-reader look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'   >
             <a-entity cursor="fuse: true; fuseTimeout: 5"
             position="0 0 -1"
-            geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"
+            geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.1"
             material="color: red; shader: flat">
             </a-entity>
             </a-camera> 
