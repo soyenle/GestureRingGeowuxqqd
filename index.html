@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-         <title>7 GestureRingGeo</title>
+         <title>8 GestureRingGeo</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
@@ -216,9 +216,7 @@ AFRAME.registerComponent('gesture-detector', {
     },
 
     handleRotation: function(event) {
-        if (this.isVisible) {
-            this.handleScale
-            
+        if (this.isVisible) {    
             this.el.object3D.rotation.y +=
                 event.detail.positionChange.x * this.data.rotationFactor;
             this.el.object3D.rotation.x +=
@@ -277,7 +275,7 @@ AFRAME.registerComponent('gesture-detector', {
                 ></a-entity>
 
             
-           <a-camera gps-camera look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'   >
+           <a-camera gps-camera   >
             
             </a-camera> 
         </a-scene>
