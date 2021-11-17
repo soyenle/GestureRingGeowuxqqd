@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-         <title>3 GestureRingGeo</title>
+         <title>4 GestureRingGeo</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
@@ -13,7 +13,7 @@
     </head>
     
    <script src="./gesture-handler.js"></script>
-   <script src="./gesture-detector.js"></script>
+   <script src="./gesture-detector.js"></script> 
     
 
     
@@ -50,8 +50,16 @@
                     scale="0.1 0.1 0.1"                   
                     gps-entity-place="latitude: 50.092238; longitude: 8.578169;"
                     
-                    gesture-handler
+                    
                       
+                ></a-entity>
+            
+            <a-entity                      
+                    gltf-model="assets/shenron_dragon_ball/scene.gltf"
+                    scale="0.005 0.005 0.005"                    
+                    gps-entity-place="latitude: 50.091440; longitude: 8.579270;"
+                    animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+                    gesture-handler
                 ></a-entity>
 
             
