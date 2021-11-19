@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title> 4Distance </title>
+    <title> 5Distance </title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -11,17 +11,18 @@
     <script>
 AFRAME.registerComponent('Distance', {
   init: function () {
-      this.el.addEventListener('load', () => {
-        const text = document.getElementById('text');
-        text.addEventListener('gps-entity-place-update-positon', (event) => {
-          document.getElementById('debug').textContent = `ABCD${event.detail.distance}m`;
-          text.setAttribute('value', text.getAttribute('distanceMsg') + ' left');
-        });
-      });
+    this.el.addEventListener('gps-entity-place-update-positon', function (evt) {
+      const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+        var doc = document.getElementById("btn");             
+            // Changing the text content
+            doc.textContent = distanceMsg;              
+    });
+  }
+});
     </script>
     
     <style>
-      .debug {
+      .buttons {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -37,9 +38,9 @@ AFRAME.registerComponent('Distance', {
 
   <body style="margin: 0; overflow: hidden;">
 
-     <div class="debug">
-     <button type = "debug" id = "debug" > LinkButton </button>
-     </div>
+     <div class="buttons">
+     <button class="Test" type = "button" id = "btn" > LinkButton </button>
+    </div>
     
     <a-scene
       vr-mode-ui="enabled: false"
