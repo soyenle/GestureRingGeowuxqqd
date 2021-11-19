@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title> 9Location-based AR.js demo</title>
+    <title> 10Location-based AR.js demo</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -18,15 +18,17 @@
       });
       
       
-    function yourFunction(){
-    // do whatever you like here
+   
+
+    AFRAME.registerComponent('cursor-listener', {
+    init: function () {
     const text = document.getElementById('box');
     document.getElementById('debug').textContent = `Distanz:${text.getAttribute('distanceMsg')}`;
         
-    setTimeout(yourFunction, 5000);
-    }
+    
 
-    yourFunction()
+  }
+});
     </script>
     
     <style>
@@ -47,7 +49,7 @@
 
   <body style="margin: 0; overflow: hidden;">
     
-    <div id="debug" yourFunction() ></div>
+    <div id="debug" ></div>
     
     <a-scene
       vr-mode-ui="enabled: false"
@@ -59,6 +61,7 @@
         material="color: red"
         gps-entity-place="latitude: 50.092258; longitude: 8.57765;"
         scale="1 1 1"
+        cursor-listener
       ></a-box>
       <a-text
         id="text"
@@ -67,7 +70,6 @@
         scale="30 30 30"
         position="0 55 0"
         gps-entity-place="latitude: 50.092258; longitude: 8.57765;"
-        yourFunction()
       ></a-text>
       
       <a-camera gps-camera rotation-reader> <a-entity cursor="fuse: true; fuseTimeout: 5"
