@@ -40,10 +40,17 @@
       position: absolute;
       top: 0%;
       left: 0%;
-
-    
-   
       }
+      
+    #debug1 { 
+        z-index: 10000;
+        background-color: white;
+        padding: 5px;
+        display: block;     
+      position: absolute;
+      top: 10%;
+      left: 0%;
+      }  
     </style>
     
   </head>
@@ -51,6 +58,7 @@
   <body style="margin: 0; overflow: hidden;">
     
     <div id="debug" ></div>
+    <div id="debug1" ></div>
     
     <a-scene
       vr-mode-ui="enabled: false"
@@ -60,7 +68,7 @@
       <a-box
         id="box"
         material="color: red"
-        gps-entity-place="latitude: 50.092258; longitude: 8.57765;"
+        gps-entity-place="latitude: 53.092258; longitude: 8.57765;"
         scale="1 1 1"
         cursor-listener
       ></a-box>
